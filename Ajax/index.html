@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax crash</title>
+    <style>
+        body
+        {
+            background: black;
+        }
+        button
+        {
+            padding: 6px;
+            background: transparent;
+            background-color: red;
+            color: white;
+            margin: auto;
+            border: none;
+        }
+        #container
+        {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn"> Get text fie</button>
+    <div id="container">
+        Text from ajax
+
+    </div>
+    <script>
+    document.getElementById("btn").addEventListener("click" ,loadText());
+    function loadText(){
+        let xhr =new XMLHttpRequest();
+        //open file /url
+        xhr.open("GET","text.txt","true");
+         xhr.onload = function()
+        { 
+        //     if (xhr.status === 200)
+        //     {
+        //          document.getElementById("container").innerHTML = xhr.responseText;
+        //     }
+        document.getElementById("container").innerHTML = xhr.responseText;
+         }
+        //200 status =ok
+        //404 not found
+        xhr.send();
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax JSON</title>
+    <style>
+        ul
+        {
+            list-style-type: decimal;
+        }
+        li
+        {
+            text-decoration: none;
+            margin: auto;
+            text-align: center;
+            display: block;
+        }
+        button
+        {
+            padding: 8px;
+            margin: 1em;
+            background: transparent;
+            border: none;
+            border: 2px solid rgb(143, 115, 170);
+            color: rgb(143, 115, 170);
+        }
+        h1
+        {
+            color: darkmagenta;
+            text-align: center;
+        }
+        h1.control-text{
+            font-size: 30px;
+            text-align: center;
+            color:  rgb(142, 61, 218);
+        }
+        #user,#users
+        {
+            font-size: 21px;
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="control-text">Simple Async Request</h1>
+    <button id="btn1"> Get Worker Info</button>
+    <button id="btn2"> Get Workers Info</button>
+    <br><br>
+    <h1>Worker</h1>
+    <div id="user"></div>
+    <h1>Workers</h1>
+    <div id="users"></div>
+    <script src="ajax.js"></script>
+    </script>
+</body>
+</html>
